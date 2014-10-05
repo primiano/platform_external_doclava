@@ -748,7 +748,7 @@ public class Doclava {
               boolean allowExcepted = hdfValue.equals("true") ? true : false;
               ClearPage.copyFile(allowExcepted, f, templ);
         }
-      } else if (f.isDirectory()) {
+      } else if (f.isDirectory() && f.getName().equals(".svn") == false) {
         writeDirectory(f, relative + f.getName() + "/", js);
       }
     }
